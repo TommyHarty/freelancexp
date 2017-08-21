@@ -1,0 +1,74 @@
+$spaceamounts: (5, 10, 12, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100);
+$sides: (top, bottom, left, right);
+
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    .m-#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space}px !important;
+    }
+
+    .p-#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$space}px !important;
+    }
+  }
+}
+
+.label {
+  position: relative;
+  top:4px;
+}
+
+.starter-template {
+  background-color: #fff;
+  padding: 35px 10px 35px 10px;
+  margin-top: -22px;
+  margin-bottom: 35px;
+  border-bottom: 1px solid #d3e0e9;
+}
+
+.user-header {
+  margin-top: -22px;
+  margin-bottom: 35px;
+  height: 250px;
+  border-bottom: 1px solid #d3e0e9;
+  background-color: #323232;
+}
+
+.user-photo {
+  width: 100%;
+  height: auto;
+  border: 1px solid #d3e0e9;
+  max-width: 225px;
+}
+
+.user-text h2 {
+  margin-top:0px;
+}
+
+.user-label .label {
+  font-size: 14px;
+  padding: 6px 9px;
+  top:-18px;
+}
+.social-icons {
+  position: relative;
+  top: 5px;
+}
+
+.social-icons i {
+  margin-left: 6px;
+  font-size: 16px;
+  position: relative;
+  top: 2px;
+}
+
+@media (max-width: 991px) {
+    .user-text .text-right {
+        text-align:left;
+        margin-bottom:23px;
+    }
+}
+
+.panel-default > .panel-heading {
+  font-weight:bold;
+}
